@@ -6,9 +6,9 @@ import java.util.Locale;
 public class investments {
 	
 	double money = 0;
-	double monthlyInput = 3000;
+	double monthlyInput = 1500;
 	double yearlyInput = monthlyInput * 12;
-	double interestRate = .11;
+	double interestRate = .2;
 	double spendYearly = 60000;
 	int ageStartWorking = 23;
 	int ageRetire = 50;

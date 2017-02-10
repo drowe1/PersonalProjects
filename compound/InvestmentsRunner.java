@@ -4,7 +4,7 @@ public class InvestmentsRunner {
 	public static void main(String[] args){
 		investments test = new investments();
 		test.growth();
-		test.taxes();
+		//test.taxes();
 		test.afterRetirement();
 	}
 
