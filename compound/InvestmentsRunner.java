@@ -7,10 +7,10 @@ public class InvestmentsRunner {
 		test.getMonthlyInput(1000);
 		test.getYearlyInput();
 		test.getRate(.11);
-		test.getAnnualSpendingAfterRetirement(40000);
+		test.getAnnualSpendingAfterRetirement(60000);
 		test.getStartAge(23);
 		test.getRetirementAge(50);
-		test.getAgeDeath(100);
+		test.getAgeDeath(80);
 		test.growth();
 		//test.taxes();
 		test.afterRetirement();
