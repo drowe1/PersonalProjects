@@ -3,7 +3,7 @@ package compound;
 public class InvestmentsRunner {
 	public static void main(String[] args){
 		Investments test = new Investments();
-		test.getStartingAmount(0);
+		test.getStartingAmount(12000);
 		test.getMonthlyInput(1000);
 		test.getYearlyInput();
 		test.getRate(.11);
