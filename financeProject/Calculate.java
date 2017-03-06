@@ -14,11 +14,12 @@ public class Calculate {
 	double amtFedTax; 
 	double amtOtherTax;
 	double propSavings; 
-	double yearlySavings;//yearly savings
+	double yearlySavings;
 	double deductions;
 	double growthRate;
 	double totalAmtSaved = 0;
-	int age = 22;
+	int age;
+	int retAge;
 
 	double[] fedBracket = {0, 9275, 37650, 91150, 190150, 413350, 415050, Integer.MAX_VALUE};
 	double[] fedTax = {0, .1, .15, .25, .28, .33, .35, .396 };
@@ -27,10 +28,20 @@ public class Calculate {
 	double[] stateTax = {0, .0535, .0705, .0785, .0985,};
 	
 	public Set<Double> getSalInfo(){
-		for(int i = 0; i<28; i++){
-			salInfo.add((double) ((i*5000)+80000));
+		for(int i = age; i<retAge; i++){
+			salInfo.add((double) (((i-age)*2000)+60000));
 		}
 		return salInfo;
+	}
+	
+	public int getAge(int ag){
+		age = ag;
+		return age;
+	}
+	
+	public int getRetAge(int ag){
+		retAge = ag;
+		return retAge;
 	}
 
 	public double getSalary(double salary) {
@@ -111,7 +122,8 @@ public class Calculate {
 
 	public String toString() {
 		age++;
-		return  "Your Salary: \t\t\t$"+(NumberFormat.getNumberInstance(Locale.US).format(sal))+"\n"
+		return  "Age:\t\t\t\t" + (age)+"\n"
+				+"Your Salary: \t\t\t$"+(NumberFormat.getNumberInstance(Locale.US).format(sal))+"\n"
 				+"Tax exempt retirement savings: \t$"+(NumberFormat.getNumberInstance(Locale.US).format(yearlySavings))+"\n"
 				+"Other tax exempt deductions: \t$"+(NumberFormat.getNumberInstance(Locale.US).format(deductions))+"\n"
 				+"Federal Income Tax: \t\t$"+(NumberFormat.getNumberInstance(Locale.US).format(amtFedTax))+"\n"
@@ -119,8 +131,7 @@ public class Calculate {
 				+"State Income Tax: \t\t$"+(NumberFormat.getNumberInstance(Locale.US).format(amtStateTax))+"\n"
 				+"Total taxes you pay: \t\t$" + (NumberFormat.getNumberInstance(Locale.US).format(amtTaxed)) +"\n"
 				+"Amount you take home: \t\t$"+ (NumberFormat.getNumberInstance(Locale.US).format(taxableSal - amtTaxed + deductions)) +"\n"
-				+"Total retirement savings: \t$" + (NumberFormat.getNumberInstance(Locale.US).format(totalAmtSaved)) +"\n"
-				+"Age:\t\t\t\t" + (age);
+				+"Total retirement savings: \t$" + (NumberFormat.getNumberInstance(Locale.US).format(totalAmtSaved)) +"\n";
 
 	}
 }
