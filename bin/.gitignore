@@ -45,10 +45,5 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-/.classpath
-/.gitattributes
-/.gitignore
-/.project
-/compound/
+/robotTester/
 /financeProject/
-/taxes/

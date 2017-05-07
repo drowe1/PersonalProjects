@@ -39,5 +39,6 @@ public class FinanceRunner {
 			test.grow();
 			System.out.println(test.toString());
 		}
+		scan.close();
 	}
 }
