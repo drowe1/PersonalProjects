@@ -122,16 +122,16 @@ public class Calculate {
 
 	public String toString() {
 		age++;
-		return  "Age:\t\t\t\t" + (age)+"\n"
-				+"Your Salary: \t\t\t$"+(NumberFormat.getNumberInstance(Locale.US).format(sal))+"\n"
+		return  "Age:\t\t\t\t\t\t" + (age)+"\n"
+				+"Your Salary: \t\t\t\t$"+(NumberFormat.getNumberInstance(Locale.US).format(sal))+"\n"
 				+"Tax exempt retirement savings: \t$"+(NumberFormat.getNumberInstance(Locale.US).format(yearlySavings))+"\n"
 				+"Other tax exempt deductions: \t$"+(NumberFormat.getNumberInstance(Locale.US).format(deductions))+"\n"
-				+"Federal Income Tax: \t\t$"+(NumberFormat.getNumberInstance(Locale.US).format(amtFedTax))+"\n"
-				+"Other Federal Taxes: \t\t$"+(NumberFormat.getNumberInstance(Locale.US).format(amtOtherTax))+"\n"
-				+"State Income Tax: \t\t$"+(NumberFormat.getNumberInstance(Locale.US).format(amtStateTax))+"\n"
-				+"Total taxes you pay: \t\t$" + (NumberFormat.getNumberInstance(Locale.US).format(amtTaxed)) +"\n"
+				+"Federal Income Tax: \t\t\t$"+(NumberFormat.getNumberInstance(Locale.US).format(amtFedTax))+"\n"
+				+"Other Federal Taxes: \t\t\t$"+(NumberFormat.getNumberInstance(Locale.US).format(amtOtherTax))+"\n"
+				+"State Income Tax: \t\t\t$"+(NumberFormat.getNumberInstance(Locale.US).format(amtStateTax))+"\n"
+				+"Total taxes you pay: \t\t\t$" + (NumberFormat.getNumberInstance(Locale.US).format(amtTaxed)) +"\n"
 				+"Amount you take home: \t\t$"+ (NumberFormat.getNumberInstance(Locale.US).format(taxableSal - amtTaxed + deductions)) +"\n"
-				+"Total retirement savings: \t$" + (NumberFormat.getNumberInstance(Locale.US).format(totalAmtSaved)) +"\n";
+				+"Total retirement savings: \t\t$" + (NumberFormat.getNumberInstance(Locale.US).format(totalAmtSaved)) +"\n";
 
 	}
 }
